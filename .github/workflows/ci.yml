@@ -27,6 +27,8 @@ jobs:
         run: pnpm install
       - name: Test
         run: pnpm test
+      - name: Lint
+        run: pnpm lint
       - name: Build
         run: pnpm run build
       - name: SonarCloud Scan
