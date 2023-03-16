@@ -1,6 +1,6 @@
 # Bravo-Yankee - Master the Phonetic Alphabet!
 
-Another React practice. Includes a fast-paced quiz.
+Another React practice. Includes a fast-paced quiz. Try it out here https://bravo-yankee.lajoscseppento.dev !
 
 Features:
 
