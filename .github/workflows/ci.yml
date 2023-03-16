@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: 18
       - name: Configure
-      - run: npm ci
+        run: npm ci
       - name: Test
-      - run: npm test
+        run: npm test
       - name: Build
-      - run: npm run build
+        run: npm run build
