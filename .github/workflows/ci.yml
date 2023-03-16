@@ -21,6 +21,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
+          cache: 'pnpm'
           node-version: 18
       - name: Configure
         run: pnpm install
