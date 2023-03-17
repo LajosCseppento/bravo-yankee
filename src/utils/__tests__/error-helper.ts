@@ -15,6 +15,7 @@ test('Test non-error types', () => {
   check(NaN, 'NaN');
   check(-Infinity, '-Infinity');
   check(Infinity, 'Infinity');
+  // eslint-disable-next-line node/no-unsupported-features/es-builtins
   check(BigInt(123), '123');
   check(Symbol('sym'), 'Symbol(sym)');
 
