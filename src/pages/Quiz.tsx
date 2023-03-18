@@ -9,7 +9,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import PageTitle from '@app/components/PageTitle';
 import CodeWord from '@app/model/CodeWord';
-import phoneticAlphabet from '@app/model/xphoneticAlphabet';
+import phoneticAlphabet from '@app/model/phoneticAlphabet';
 import shuffle from '@app/utils/shuffle';
 
 const newShuffle = () => shuffle([...phoneticAlphabet]);
