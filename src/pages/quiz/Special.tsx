@@ -18,7 +18,7 @@ const Special = ({current, input, reset}: Props) => {
 
   const restart = () => {
     if (videoRef.current) {
-      videoRef.current.fastSeek(0);
+      videoRef.current.currentTime = 0;
       videoRef.current.play();
     }
   };
