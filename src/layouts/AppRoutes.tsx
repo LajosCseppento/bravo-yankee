@@ -3,8 +3,8 @@ import {ErrorBoundary} from 'react-error-boundary';
 import {Route, Routes, useLocation} from 'react-router-dom';
 
 import Learn from '@app/pages/Learn';
-import Quiz from '@app/pages/Quiz';
 import Home from '@app/pages/home/Home';
+import Quiz from '@app/pages/quiz/Quiz';
 
 import ErrorFallback from './ErrorFallback';
 

@@ -11,6 +11,7 @@ Features:
 - Phonetic Alphabet table
 - Interactive viewer for learning
 - Timed quiz mode (random order)
+- "Wife mode"
 
 ## Screenshots
 

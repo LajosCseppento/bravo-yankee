@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 
 import PageTitle from '@app/components/PageTitle';
-import phoneticAlphabet from '@app/model/PhoneticAlphabet';
+import phoneticAlphabet from '@app/model/phoneticAlphabet';
 
 import CodeWordGrid from './CodeWordGrid';
 

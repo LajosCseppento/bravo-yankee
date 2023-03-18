@@ -2,11 +2,13 @@ import Box from '@mui/material/Box';
 import Input from '@mui/material/Input';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import PageTitle from '@app/components/PageTitle';
-import phoneticAlphabet from '@app/model/PhoneticAlphabet';
+import phoneticAlphabet from '@app/model/phoneticAlphabet';
 import shuffle from '@app/utils/shuffle';
+
+import Special from './Special';
 
 const newShuffle = () => shuffle([...phoneticAlphabet]);
 
@@ -15,6 +17,8 @@ const Quiz = () => {
   const [startTime, setStartTime] = useState(Date.now());
   const [finishTime, setFinishTime] = useState<number | undefined>(undefined);
   const [now, setNow] = useState(Date.now());
+  const [input, setInput] = useState('');
+  const inputRef = useRef<HTMLInputElement>();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,13 +36,15 @@ const Quiz = () => {
     setNow(Date.now());
   };
 
-  const change = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!event || !remaining) {
       return;
     }
 
     const input = event.target.value.trim().toLowerCase();
     const current = remaining[0];
+
+    setInput(input);
 
     if (
       current.spelling === input ||
@@ -52,6 +58,14 @@ const Quiz = () => {
   if (remaining.length === 0 && !finishTime) {
     setFinishTime(Date.now());
   }
+
+  const onSpecialReset = () => {
+    setInput('');
+    if (inputRef.current) {
+      inputRef.current.value = '';
+      inputRef.current.focus();
+    }
+  };
 
   const elapsed = Math.floor(((finishTime ?? now) - startTime) / 1000);
   const elapsedMinutes = Math.floor(elapsed / 60)
@@ -80,34 +94,27 @@ const Quiz = () => {
             {`${current.letter} = `}
           </Typography>
           <Input
-            inputRef={input => input && input.focus()}
-            onChange={change}
-            sx={{
-              fontSize: '3em',
-              maxWidth: '5em',
-            }}
+            autoFocus
+            inputRef={inputRef}
+            onChange={onChange}
+            sx={{fontSize: '3em', maxWidth: '5em'}}
           />
-          <Box
-            padding={1}
-            sx={{
-              display: 'inline',
-              fontSize: '2em',
-            }}
-          >
+          <Box padding={1} sx={{display: 'inline', fontSize: '2em'}}>
             {remaining.length} left
           </Box>
         </>
       )}
+
       {remaining.length === 0 && (
-        <>
-          <Typography padding={1}>
-            You are done! Great job!{' '}
-            <Link href="#" onClick={reset}>
-              Try again!
-            </Link>
-          </Typography>
-        </>
+        <Typography padding={1}>
+          You are done! Great job!{' '}
+          <Link href="#" onClick={reset}>
+            Try again!
+          </Link>
+        </Typography>
       )}
+
+      <Special input={input} current={current} reset={onSpecialReset} />
     </>
   );
 };
