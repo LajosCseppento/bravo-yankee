@@ -19,6 +19,7 @@ class CodeWord {
     return this._letter;
   }
 }
+
 const sortCodeWord = (lhs: CodeWord, rhs: CodeWord) => {
   // Strictly by ASCII first (ignore case)
   const lhsLetter = lhs.letter.toLowerCase().charCodeAt(0);
