@@ -30,6 +30,12 @@ const Special = ({current, input, reset}: Props) => {
     }
   };
 
+  const closeButton = (
+    <Button color="error" onClick={reset}>
+      Close
+    </Button>
+  );
+
   const createVideo = (source: JSX.Element) => (
     <>
       <Box sx={{textAlign: 'center'}}>
@@ -41,9 +47,7 @@ const Special = ({current, input, reset}: Props) => {
       <Stack direction="row" alignSelf="center">
         <Button onClick={restart}>Again!</Button>
         <Button onClick={unmute}>With sound!</Button>
-        <Button color="error" onClick={reset}>
-          Close
-        </Button>
+        {closeButton}
       </Stack>
     </>
   );
@@ -56,9 +60,7 @@ const Special = ({current, input, reset}: Props) => {
         <Typography variant="body2" sx={{fontStyle: 'italic'}}>
           ... but the correct answer is Romeo
         </Typography>
-        <Button color="error" onClick={reset}>
-          Close
-        </Button>
+        {closeButton}
       </Stack>
     );
   } else if (current?.letter === 'k') {
