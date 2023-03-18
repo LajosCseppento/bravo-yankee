@@ -16,7 +16,7 @@ type Props = {
 const Special = ({current, input, reset}: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const videoSpecial = (source: JSX.Element) => (
+  const createVideo = (source: JSX.Element) => (
     <>
       <Box sx={{textAlign: 'center'}}>
         <video ref={videoRef} width="75%" height="auto" controls autoPlay muted>
@@ -52,9 +52,9 @@ const Special = ({current, input, reset}: Props) => {
     </>
   );
 
-  let special;
+  let content: JSX.Element | null = null;
   if (current?.letter === 'r' && input === 'rosie') {
-    special = (
+    content = (
       <Stack>
         <Typography sx={{fontSize: '2em'}}>Rosie is the best! 🐣</Typography>
         <Typography variant="body2" sx={{fontStyle: 'italic'}}>
@@ -67,11 +67,11 @@ const Special = ({current, input, reset}: Props) => {
     );
   } else if (current?.letter === 'k') {
     if (input === 'kiwi') {
-      special = videoSpecial(
+      content = createVideo(
         <source src="/static/video/kiwi.mp4" type="video/mp4" />
       );
     } else if (input === 'koala') {
-      special = videoSpecial(
+      content = createVideo(
         <source src="/static/video/koala.mp4" type="video/mp4" />
       );
     }
@@ -79,16 +79,16 @@ const Special = ({current, input, reset}: Props) => {
 
   return (
     <>
-      {special && (
+      {content && (
         <Backdrop
           sx={{
             color: '#fff',
             backgroundColor: '#000000dd',
             zIndex: theme => theme.zIndex.drawer + 1,
           }}
-          open={special !== null}
+          open={content !== null}
         >
-          <Stack>{special}</Stack>
+          <Stack>{content}</Stack>
         </Backdrop>
       )}
     </>
