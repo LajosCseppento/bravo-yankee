@@ -2,10 +2,10 @@ import Box from '@mui/material/Box';
 import Input from '@mui/material/Input';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import phoneticAlphabet from 'model/PhoneticAlphabet';
 import React, {useEffect, useState} from 'react';
 
 import PageTitle from '@app/components/PageTitle';
+import phoneticAlphabet from '@app/model/PhoneticAlphabet';
 import shuffle from '@app/utils/shuffle';
 
 const newShuffle = () => shuffle([...phoneticAlphabet]);

@@ -1,10 +1,10 @@
 import {styled} from '@mui/material';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import phoneticAlphabet from 'model/PhoneticAlphabet';
 import React, {useState} from 'react';
 
 import PageTitle from '@app/components/PageTitle';
+import phoneticAlphabet from '@app/model/PhoneticAlphabet';
 
 const StyledButton = styled(Button)({
   fontSize: '1em',

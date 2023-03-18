@@ -1,6 +1,7 @@
 import Grid from '@mui/material/Grid';
-import CodeWord from 'model/CodeWord';
 import React from 'react';
+
+import CodeWord from '@app/model/CodeWord';
 
 import CodeWordStack from './CodeWordStack';
 

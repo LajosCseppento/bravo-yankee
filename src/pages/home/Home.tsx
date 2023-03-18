@@ -1,9 +1,9 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import phoneticAlphabet from 'model/PhoneticAlphabet';
 import React from 'react';
 
 import PageTitle from '@app/components/PageTitle';
+import phoneticAlphabet from '@app/model/PhoneticAlphabet';
 
 import CodeWordGrid from './CodeWordGrid';
 

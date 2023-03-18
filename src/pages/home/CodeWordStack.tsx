@@ -1,7 +1,8 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import CodeWord from 'model/CodeWord';
 import React from 'react';
+
+import CodeWord from '@app/model/CodeWord';
 
 type Props = {
   codeWords: readonly CodeWord[];
