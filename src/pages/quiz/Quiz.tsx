@@ -94,8 +94,8 @@ const Quiz = () => {
             {`${current.letter} = `}
           </Typography>
           <Input
-            inputRef={inputRef}
             autoFocus
+            inputRef={inputRef}
             onChange={onChange}
             sx={{fontSize: '3em', maxWidth: '5em'}}
           />

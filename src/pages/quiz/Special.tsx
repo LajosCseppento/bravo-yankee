@@ -16,6 +16,20 @@ type Props = {
 const Special = ({current, input, reset}: Props) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  const restart = () => {
+    if (videoRef.current) {
+      videoRef.current.fastSeek(0);
+      videoRef.current.play();
+    }
+  };
+
+  const unmute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.volume = 1.0;
+    }
+  };
+
   const createVideo = (source: JSX.Element) => (
     <>
       <Box sx={{textAlign: 'center'}}>
@@ -25,26 +39,8 @@ const Special = ({current, input, reset}: Props) => {
         </video>
       </Box>
       <Stack direction="row" alignSelf="center">
-        <Button
-          onClick={() => {
-            if (videoRef.current) {
-              videoRef.current.fastSeek(0);
-              videoRef.current.play();
-            }
-          }}
-        >
-          Again!
-        </Button>
-        <Button
-          onClick={() => {
-            if (videoRef.current) {
-              videoRef.current.muted = false;
-              videoRef.current.volume = 1.0;
-            }
-          }}
-        >
-          With sound!
-        </Button>
+        <Button onClick={restart}>Again!</Button>
+        <Button onClick={unmute}>With sound!</Button>
         <Button color="error" onClick={reset}>
           Close
         </Button>
