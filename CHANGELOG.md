@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Confusing alternative spellings are not accepted any more
+
 ## [0.1.0] - 2023-03-17
 
 ### Added
@@ -16,4 +20,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Timed quiz mode (random order)
 - Hosting on GCP
 
+[Unreleased]: https://github.com/LajosCseppento/bravo-yankee/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v0.1.0

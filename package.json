@@ -22,7 +22,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "jest",
+    "test": "jest --coverage",
     "test-watch": "jest --watch",
     "eject": "craco eject",
     "clean": "gts clean",
@@ -53,6 +53,7 @@
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/facebook-js-sdk": "^3.3.6",
     "@types/jest": "^29.4.0",
+    "craco-plugin-env": "^1.0.5",
     "cross-env": "^7.0.3",
     "eslint-plugin-mui-path-imports": "^0.0.14",
     "gts": "^3.1.1",

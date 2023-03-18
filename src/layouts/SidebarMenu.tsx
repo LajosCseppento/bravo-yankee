@@ -1,5 +1,7 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeIcon from '@mui/icons-material/Home';
+import QuizIcon from '@mui/icons-material/Quiz';
+import SchoolIcon from '@mui/icons-material/School';
 import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
@@ -8,9 +10,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import React from 'react';
-import QuizIcon from '@mui/icons-material/Quiz';
 import {Link as RouterLink, useLocation} from 'react-router-dom';
-import SchoolIcon from '@mui/icons-material/School';
 
 type SidebarItem = {
   title: string;

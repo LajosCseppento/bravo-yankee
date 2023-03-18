@@ -1,17 +1,18 @@
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 import React from 'react';
 
-import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
+import CodeWord from '@app/model/CodeWord';
 
 type Props = {
-  codeWords: string[];
+  codeWords: readonly CodeWord[];
 };
 
 const CodeWordStack = ({codeWords}: Props) => (
   <Stack alignItems="left" alignContent="left">
     {codeWords.map(codeWord => (
       <Typography
-        key={codeWord}
+        key={codeWord.spelling}
         padding={1}
         sx={{
           textTransform: 'capitalize',
@@ -20,7 +21,7 @@ const CodeWordStack = ({codeWords}: Props) => (
           },
         }}
       >
-        {codeWord}
+        {codeWord.spelling}
       </Typography>
     ))}
   </Stack>

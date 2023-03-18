@@ -1,32 +1,33 @@
-import React, {useState} from 'react';
-import {phoneticAlphabet} from 'model';
-import PageTitle from '@app/components/PageTitle';
+import {styled} from '@mui/material';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import {styled} from '@mui/material';
+import React, {useState} from 'react';
+
+import PageTitle from '@app/components/PageTitle';
+import phoneticAlphabet from '@app/model/PhoneticAlphabet';
 
 const StyledButton = styled(Button)({
   fontSize: '1em',
 });
 
-const codeWords = Array.from(phoneticAlphabet.keys());
-
 const Learn = () => {
   const [index, setIndex] = useState(0);
 
   const previous = () => {
-    setIndex(prev => (prev - 1 + codeWords.length) % codeWords.length);
+    setIndex(
+      prev => (prev - 1 + phoneticAlphabet.length) % phoneticAlphabet.length
+    );
   };
 
   const random = () => {
-    setIndex(Math.floor(Math.random() * codeWords.length));
+    setIndex(Math.floor(Math.random() * phoneticAlphabet.length));
   };
 
   const next = () => {
-    setIndex(prev => (prev + 1) % codeWords.length);
+    setIndex(prev => (prev + 1) % phoneticAlphabet.length);
   };
 
-  const current = codeWords[index];
+  const current = phoneticAlphabet[index];
 
   return (
     <>
@@ -39,7 +40,7 @@ const Learn = () => {
         }}
         padding={1}
       >
-        {current[0]} = {current}
+        {current.letter} = {current.spelling}
       </Typography>
       <StyledButton onClick={previous}>Previous</StyledButton>
       <StyledButton onClick={random}>Random</StyledButton>
