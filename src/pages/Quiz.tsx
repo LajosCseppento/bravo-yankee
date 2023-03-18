@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import {phoneticAlphabet} from 'model';
-import PageTitle from '@app/components/PageTitle';
-import shuffle from '@app/utils/shuffle';
 import Box from '@mui/material/Box';
 import Input from '@mui/material/Input';
-import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
+import phoneticAlphabet from 'model/PhoneticAlphabet';
+import React, {useEffect, useState} from 'react';
 
-const newShuffle = () => shuffle(Array.from(phoneticAlphabet.entries()));
+import PageTitle from '@app/components/PageTitle';
+import shuffle from '@app/utils/shuffle';
+
+const newShuffle = () => shuffle([...phoneticAlphabet]);
 
 const Quiz = () => {
   const [remaining, setRemaining] = useState(newShuffle());
@@ -39,7 +40,10 @@ const Quiz = () => {
     const input = event.target.value.trim().toLowerCase();
     const current = remaining[0];
 
-    if (current[0] === input || current[1].includes(input)) {
+    if (
+      current.spelling === input ||
+      current.alternativeSpellings.includes(input)
+    ) {
       event.target.value = '';
       setRemaining(prev => prev.slice(1));
     }
@@ -57,6 +61,8 @@ const Quiz = () => {
     .toString()
     .padStart(2, '0');
 
+  const current = remaining[0];
+
   return (
     <>
       <PageTitle value={`Quiz - ${elapsedMinutes}:${elapsedSeconds}`} />
@@ -71,7 +77,7 @@ const Quiz = () => {
             }}
             padding={1}
           >
-            {remaining[0][0][0]} ={' '}
+            {`${current.letter} = `}
           </Typography>
           <Input
             inputRef={input => input && input.focus()}

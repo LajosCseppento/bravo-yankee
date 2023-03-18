@@ -1,12 +1,11 @@
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import phoneticAlphabet from 'model/PhoneticAlphabet';
 import React from 'react';
 
-import Typography from '@mui/material/Typography';
 import PageTitle from '@app/components/PageTitle';
-import {phoneticAlphabet} from 'model';
-import Box from '@mui/material/Box';
-import CodeWordGrid from './CodeWordGrid';
 
-const codeWords = Array.from(phoneticAlphabet.keys());
+import CodeWordGrid from './CodeWordGrid';
 
 const Home = () => (
   <>
@@ -19,11 +18,11 @@ const Home = () => (
     </Typography>
 
     <Box sx={{display: {xs: 'block', sm: 'none'}}}>
-      <CodeWordGrid codeWords={codeWords} columns={2} />
+      <CodeWordGrid codeWords={phoneticAlphabet} columns={2} />
     </Box>
 
     <Box sx={{display: {xs: 'none', sm: 'block'}}}>
-      <CodeWordGrid codeWords={codeWords} columns={4} />
+      <CodeWordGrid codeWords={phoneticAlphabet} columns={4} />
     </Box>
   </>
 );

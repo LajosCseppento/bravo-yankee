@@ -1,10 +1,11 @@
+import Grid from '@mui/material/Grid';
+import CodeWord from 'model/CodeWord';
 import React from 'react';
 
-import Grid from '@mui/material/Grid';
 import CodeWordStack from './CodeWordStack';
 
 type Props = {
-  codeWords: string[];
+  codeWords: readonly CodeWord[];
   columns: number;
 };
 
