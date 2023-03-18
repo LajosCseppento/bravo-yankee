@@ -10,9 +10,10 @@ class CodeWord {
     if (spelling.length < 1) {
       throw new Error('Invalid code word: ' + spelling);
     }
-    this._letter = spelling[0];
-    this.spelling = spelling;
-    this.alternativeSpellings = alternativeSpellings ?? [];
+    this._letter = spelling[0].toLowerCase();
+    this.spelling = spelling.toLowerCase();
+    this.alternativeSpellings =
+      alternativeSpellings?.map(s => s.toLowerCase()) ?? [];
   }
 
   get letter() {
