@@ -22,7 +22,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "jest",
+    "test": "jest --coverage",
     "test-watch": "jest --watch",
     "eject": "craco eject",
     "clean": "gts clean",
