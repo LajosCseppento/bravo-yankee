@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import React, {useState} from 'react';
 
 import PageTitle from '@app/components/PageTitle';
-import phoneticAlphabet from '@app/model/PhoneticAlphabet';
+import phoneticAlphabet from '@app/model/xphoneticAlphabet';
 
 const StyledButton = styled(Button)({
   fontSize: '1em',
