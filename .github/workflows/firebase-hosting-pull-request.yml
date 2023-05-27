@@ -18,7 +18,7 @@ jobs:
           cache: 'pnpm'
           node-version: 18
       - name: Build
-        run: pnpm ci && pnpm build
+        run: pnpm install && pnpm build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
