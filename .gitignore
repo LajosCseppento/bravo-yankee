@@ -1,7 +1,16 @@
 build/
 
-# Created by https://www.toptal.com/developers/gitignore/api/git,visualstudiocode,node,react
-# Edit at https://www.toptal.com/developers/gitignore?templates=git,visualstudiocode,node,react
+# Created by https://www.toptal.com/developers/gitignore/api/git,visualstudiocode,node,react,firebase
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,visualstudiocode,node,react,firebase
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -190,4 +199,4 @@ sketch
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/git,visualstudiocode,node,react
+# End of https://www.toptal.com/developers/gitignore/api/git,visualstudiocode,node,react,firebase
