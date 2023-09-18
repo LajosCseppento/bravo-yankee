@@ -17,12 +17,12 @@ jobs:
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7
+          version: 8
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
-          node-version: 18
+          node-version: 20
       - name: Configure
         run: pnpm install
       - name: Test
