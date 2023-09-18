@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Move hosting from GCP to Firebase
 - Dependency upgrades (2023-09)
 
 ## [0.2.0] - 2023-03-18
