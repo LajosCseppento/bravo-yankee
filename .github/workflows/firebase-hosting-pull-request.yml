@@ -1,0 +1,26 @@
+name: Deploy Preview to Firebase Hosting on PR
+on: pull_request
+
+jobs:
+  build_and_deploy_preview:
+    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          cache: 'pnpm'
+          node-version: 18
+      - name: Build
+        run: pnpm install && pnpm build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BRAVO_YANKEE }}'
+          projectId: bravo-yankee
