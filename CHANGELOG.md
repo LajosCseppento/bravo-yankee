@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Fix video hosting (#15)
 
+### Changed
+
+- Reduce video file sizes
+
 ## [0.3.0] - 2023-09-18
 
 ### Fixed
