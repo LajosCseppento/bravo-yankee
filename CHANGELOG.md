@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1] - 2023-10-21
+
+### Fixed
+
+- Fix video hosting (#15)
+
 ## [0.3.0] - 2023-09-18
 
 ### Fixed
@@ -37,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Timed quiz mode (random order)
 - Hosting on GCP
 
-[Unreleased]: https://github.com/LajosCseppento/bravo-yankee/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/LajosCseppento/bravo-yankee/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v0.3.1
 [0.3.0]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v0.3.0
 [0.2.0]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v0.2.0
 [0.1.0]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v0.1.0
