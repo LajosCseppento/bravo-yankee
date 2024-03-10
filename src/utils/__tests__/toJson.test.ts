@@ -67,7 +67,7 @@ test('Test general data types', () => {
   check(
     (c: number, d: number) => c + d,
     `{
-  "$specialValue": "function (c, d) { return c + d; }"
+  "$specialValue": "(c, d) => c + d"
 }`
   );
 
@@ -160,7 +160,7 @@ test('Test complex object with special values', () => {
       "$specialValue": "function (a, b) {\\n                return a + b;\\n            }"
     },
     {
-      "$specialValue": "function (c, d) { return c + d; }"
+      "$specialValue": "(c, d) => c + d"
     }
   ],
   "errors": [
