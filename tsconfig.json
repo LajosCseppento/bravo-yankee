@@ -11,7 +11,7 @@
       "@app/utils/*": ["utils/*"]
     },
     "outDir": "build",
-    "target": "es5",
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowSyntheticDefaultImports": true,
     "module": "esnext",
