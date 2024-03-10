@@ -7,13 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2024-03-????
+## [1.0.0] - 2024-03-10
 
 ### Changed
 
-- Dependency upgrades (2024-03), notable:
-  - TypeScript 5.TODO
-  - TODO
+- Dependency upgrades (2024-03)
 - Migrate build from CRA to Vite
 
 ## [0.3.1] - 2023-10-21
