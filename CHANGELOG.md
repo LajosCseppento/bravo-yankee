@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2024-03-10
+
+### Changed
+
+- Dependency upgrades (2024-03)
+- Migrate build from CRA to Vite
+
 ## [0.3.1] - 2023-10-21
 
 ### Fixed
@@ -47,7 +54,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Timed quiz mode (random order)
 - Hosting on GCP
 
-[Unreleased]: https://github.com/LajosCseppento/bravo-yankee/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/LajosCseppento/bravo-yankee/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v1.0.0
 [0.3.1]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v0.3.1
 [0.3.0]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v0.3.0
 [0.2.0]: https://github.com/LajosCseppento/bravo-yankee/releases/tag/v0.2.0

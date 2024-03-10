@@ -29,7 +29,7 @@ test('Test non-error types', () => {
   check(
     () => false,
     `{
-  "$specialValue": "function () { return false; }"
+  "$specialValue": "() => false"
 }`
   );
   check(
