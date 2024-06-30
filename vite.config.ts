@@ -1,8 +1,5 @@
-// eslint-disable-next-line node/no-unpublished-import
 import react from '@vitejs/plugin-react';
-// eslint-disable-next-line node/no-unpublished-import
 import {defineConfig, splitVendorChunkPlugin} from 'vite';
-// eslint-disable-next-line node/no-unpublished-import
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/

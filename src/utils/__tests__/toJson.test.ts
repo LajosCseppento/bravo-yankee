@@ -27,7 +27,6 @@ test('Test general data types', () => {
 }`
   );
   check(Infinity, '{"$specialValue":"Infinity"}', false);
-  // eslint-disable-next-line node/no-unsupported-features/es-builtins
   check(BigInt(123), '{"$specialValue":"BigInt(123)"}', false);
 
   // strings
@@ -100,7 +99,6 @@ test('Test complex object with special values', () => {
     {
       booleans: [false, true],
       numbers: [0, 1],
-      // eslint-disable-next-line node/no-unsupported-features/es-builtins
       specialNumbers: [NaN, -Infinity, Infinity, BigInt(123)],
       strings: ['a', ' bc\nd '],
       specials: [
