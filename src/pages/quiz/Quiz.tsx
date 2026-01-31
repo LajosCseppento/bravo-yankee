@@ -18,7 +18,7 @@ const Quiz = () => {
   const [finishTime, setFinishTime] = useState<number | undefined>(undefined);
   const [now, setNow] = useState(Date.now());
   const [input, setInput] = useState('');
-  const inputRef = useRef<HTMLInputElement>();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {

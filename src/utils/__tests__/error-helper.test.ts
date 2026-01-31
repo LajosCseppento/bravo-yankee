@@ -1,3 +1,5 @@
+import {expect, test} from 'vitest';
+
 import getErrorText from '../error-helper';
 
 const check = (error: unknown, expected: string) => {

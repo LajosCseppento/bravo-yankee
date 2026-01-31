@@ -1,3 +1,5 @@
+import {test} from 'vitest';
+
 import {check} from './toJson.test';
 
 type Obj = {

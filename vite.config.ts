@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import {defineConfig, splitVendorChunkPlugin} from 'vite';
+import {defineConfig} from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
@@ -10,8 +10,17 @@ export default defineConfig({
       babel: {plugins: ['@emotion/babel-plugin']},
     }),
     tsconfigPaths(),
-    splitVendorChunkPlugin(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          mui: ['@mui/material', '@mui/icons-material'],
+        },
+      },
+    },
+  },
   define: {
     APP_PACKAGE_NAME: JSON.stringify(process.env.npm_package_name),
     APP_PACKAGE_VERSION: JSON.stringify(process.env.npm_package_version),

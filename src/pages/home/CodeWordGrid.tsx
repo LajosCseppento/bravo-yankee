@@ -1,5 +1,4 @@
 import Grid from '@mui/material/Grid';
-import React from 'react';
 
 import CodeWord from '@app/model/CodeWord';
 
@@ -16,7 +15,7 @@ const CodeWordGrid = ({codeWords, columns}: Props) => {
   return (
     <Grid container columns={columns} maxWidth={400}>
       {Array.from(Array(columns)).map((_, columnIndex) => (
-        <Grid item xs={1} key={columnIndex}>
+        <Grid size={1} key={columnIndex}>
           <CodeWordStack
             codeWords={codeWords.slice(
               columnIndex * columnSize,

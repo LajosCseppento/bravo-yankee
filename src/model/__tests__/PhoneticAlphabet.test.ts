@@ -1,3 +1,5 @@
+import {expect, test} from 'vitest';
+
 import phoneticAlphabet from '../phoneticAlphabet';
 
 test('Test that the alphabet is covered', () => {

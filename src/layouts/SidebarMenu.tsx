@@ -9,14 +9,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import React from 'react';
+import {type ReactNode} from 'react';
 import {Link as RouterLink, useLocation} from 'react-router-dom';
 
 type SidebarItem = {
   title: string;
   path: string;
-  icon: JSX.Element;
-  secondaryAction?: JSX.Element;
+  icon: ReactNode;
+  secondaryAction?: ReactNode;
 };
 
 const items: SidebarItem[][] = [
@@ -33,7 +33,7 @@ const SidebarMenu = () => {
   return (
     <>
       {items.map((itemGroup, index) => (
-        <React.Fragment key={'group_' + index}>
+        <span key={'group_' + index}>
           <Divider />
           <List>
             {itemGroup.map(item => (
@@ -49,7 +49,7 @@ const SidebarMenu = () => {
               </ListItem>
             ))}
           </List>
-        </React.Fragment>
+        </span>
       ))}
 
       <Divider />
