@@ -50,19 +50,17 @@ test('Test general data types', () => {
 }`
   );
   check(
-    // eslint-disable-next-line prefer-arrow-callback
     function () {},
     `{
-  "$specialValue": "function() {\\n    }"
+  "$specialValue": "function() {\\n  }"
 }`
   );
   check(
-    // eslint-disable-next-line prefer-arrow-callback
     function (a: number, b: number) {
       return a + b;
     },
     `{
-  "$specialValue": "function(a, b) {\\n      return a + b;\\n    }"
+  "$specialValue": "function(a, b) {\\n    return a + b;\\n  }"
 }`
   );
   check(

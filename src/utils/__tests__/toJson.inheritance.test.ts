@@ -112,7 +112,7 @@ class ToJSONSuperclass {
     this.field1 = field1;
   }
 
-  public toJSON(): {} {
+  public toJSON(): object {
     return {
       type: 'super',
       class: this.constructor.name,
@@ -129,7 +129,7 @@ class ToJSONSubclass extends ToJSONSuperclass {
     this.field2 = field2;
   }
 
-  public override toJSON(): {} {
+  public override toJSON(): object {
     return {...super.toJSON(), type: 'sub', field2: this.field2};
   }
 }
