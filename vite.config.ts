@@ -1,6 +1,5 @@
 import react from '@vitejs/plugin-react';
 import {defineConfig} from 'vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,14 +8,20 @@ export default defineConfig({
       jsxImportSource: '@emotion/react',
       babel: {plugins: ['@emotion/babel-plugin']},
     }),
-    tsconfigPaths(),
   ],
+  resolve: {
+    tsconfigPaths: true,
+  },
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          mui: ['@mui/material', '@mui/icons-material'],
+        manualChunks(id) {
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) {
+            return 'vendor';
+          }
+          if (id.includes('node_modules/@mui/')) {
+            return 'mui';
+          }
         },
       },
     },

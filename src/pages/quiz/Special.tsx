@@ -44,7 +44,7 @@ const Special = ({current, input, reset}: Props) => {
           Cannot play the video. Sorry.
         </video>
       </Box>
-      <Stack direction="row" alignSelf="center">
+      <Stack direction="row" sx={{alignSelf: 'center'}}>
         <Button onClick={restart}>Again!</Button>
         <Button onClick={unmute}>With sound!</Button>
         {closeButton}

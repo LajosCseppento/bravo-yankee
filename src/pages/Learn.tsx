@@ -37,8 +37,8 @@ const Learn = () => {
           fontSize: '3em',
           fontWeight: 'bold',
           textTransform: 'uppercase',
+          padding: 1,
         }}
-        padding={1}
       >
         {current.letter} = {current.spelling}
       </Typography>

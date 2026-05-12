@@ -52,7 +52,7 @@ test('Test general data types', () => {
   check(
     function () {},
     `{
-  "$specialValue": "function() {\\n  }"
+  "$specialValue": "function() {}"
 }`
   );
   check(
@@ -60,7 +60,7 @@ test('Test general data types', () => {
       return a + b;
     },
     `{
-  "$specialValue": "function(a, b) {\\n    return a + b;\\n  }"
+  "$specialValue": "function(a, b) {\\n\\t\\treturn a + b;\\n\\t}"
 }`
   );
   check(
@@ -152,10 +152,10 @@ test('Test complex object with special values', () => {
       "$specialValue": "Symbol(sym)"
     },
     {
-      "$specialValue": "function() {\\n    }"
+      "$specialValue": "function() {}"
     },
     {
-      "$specialValue": "function(a, b) {\\n      return a + b;\\n    }"
+      "$specialValue": "function(a, b) {\\n\\t\\t\\t\\treturn a + b;\\n\\t\\t\\t}"
     },
     {
       "$specialValue": "(c, d) => c + d"

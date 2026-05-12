@@ -1,5 +1,4 @@
 import react from '@vitejs/plugin-react';
-import tsconfigPaths from 'vite-tsconfig-paths';
 import {defineConfig} from 'vitest/config';
 
 export default defineConfig({
@@ -8,8 +7,10 @@ export default defineConfig({
       jsxImportSource: '@emotion/react',
       babel: {plugins: ['@emotion/babel-plugin']},
     }),
-    tsconfigPaths(),
   ],
+  resolve: {
+    tsconfigPaths: true,
+  },
   test: {
     globals: true,
     environment: 'jsdom',

@@ -88,8 +88,8 @@ const Quiz = () => {
               fontSize: '3em',
               fontWeight: 'bold',
               textTransform: 'uppercase',
+              padding: 1,
             }}
-            padding={1}
           >
             {`${current.letter} = `}
           </Typography>
@@ -99,14 +99,14 @@ const Quiz = () => {
             onChange={onChange}
             sx={{fontSize: '3em', maxWidth: '5em'}}
           />
-          <Box padding={1} sx={{display: 'inline', fontSize: '2em'}}>
+          <Box sx={{padding: 1, display: 'inline', fontSize: '2em'}}>
             {remaining.length} left
           </Box>
         </>
       )}
 
       {remaining.length === 0 && (
-        <Typography padding={1}>
+        <Typography sx={{padding: 1}}>
           You are done! Great job!{' '}
           <Link href="#" onClick={reset}>
             Try again!

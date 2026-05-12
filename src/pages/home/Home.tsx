@@ -10,10 +10,10 @@ import CodeWordGrid from './CodeWordGrid';
 const Home = () => (
   <>
     <PageTitle value="Home" />
-    <Typography padding={1}>
+    <Typography sx={{padding: 1}}>
       Whiskey Echo Lima Charlie Oscar Mike Echo! Welcome!
     </Typography>
-    <Typography padding={1}>
+    <Typography sx={{padding: 1}}>
       Refer to the table below or check out the menu for some games!
     </Typography>
 
