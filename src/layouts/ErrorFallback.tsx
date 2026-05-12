@@ -15,10 +15,10 @@ const ErrorFallback = (props: FallbackProps) => {
   return (
     <Alert severity="error">
       <AlertTitle>Oops, something went terribly wrong :-(</AlertTitle>
-      <Typography padding={2} style={{whiteSpace: 'pre-wrap'}}>
+      <Typography sx={{padding: 2, whiteSpace: 'pre-wrap'}}>
         {getErrorText(error)}
       </Typography>
-      <Typography padding={2}>
+      <Typography sx={{padding: 2}}>
         No promise that{' '}
         <Link href="#" onClick={props.resetErrorBoundary}>
           reset
@@ -33,7 +33,7 @@ const ErrorFallback = (props: FallbackProps) => {
         </Link>
         .
       </Typography>
-      <Typography padding={2}>
+      <Typography sx={{padding: 2}}>
         {[...Array(boatCount)].map((_, i) => (
           <SailingIcon key={i} />
         ))}

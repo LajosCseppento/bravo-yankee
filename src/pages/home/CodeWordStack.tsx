@@ -9,12 +9,12 @@ type Props = {
 };
 
 const CodeWordStack = ({codeWords}: Props) => (
-  <Stack alignItems="left" alignContent="left">
+  <Stack sx={{alignItems: 'left', alignContent: 'left'}}>
     {codeWords.map(codeWord => (
       <Typography
         key={codeWord.spelling}
-        padding={1}
         sx={{
+          padding: 1,
           textTransform: 'capitalize',
           '&::first-letter': {
             fontWeight: 'bold',

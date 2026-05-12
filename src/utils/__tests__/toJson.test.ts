@@ -1,3 +1,5 @@
+import {expect, test} from 'vitest';
+
 import toJson from '../toJson';
 
 export const check = (value: unknown, expected: string, format?: boolean) => {
@@ -48,19 +50,17 @@ test('Test general data types', () => {
 }`
   );
   check(
-    // eslint-disable-next-line prefer-arrow-callback
     function () {},
     `{
-  "$specialValue": "function () { }"
+  "$specialValue": "function() {}"
 }`
   );
   check(
-    // eslint-disable-next-line prefer-arrow-callback
     function (a: number, b: number) {
       return a + b;
     },
     `{
-  "$specialValue": "function (a, b) {\\n        return a + b;\\n    }"
+  "$specialValue": "function(a, b) {\\n\\t\\treturn a + b;\\n\\t}"
 }`
   );
   check(
@@ -152,10 +152,10 @@ test('Test complex object with special values', () => {
       "$specialValue": "Symbol(sym)"
     },
     {
-      "$specialValue": "function () { }"
+      "$specialValue": "function() {}"
     },
     {
-      "$specialValue": "function (a, b) {\\n                return a + b;\\n            }"
+      "$specialValue": "function(a, b) {\\n\\t\\t\\t\\treturn a + b;\\n\\t\\t\\t}"
     },
     {
       "$specialValue": "(c, d) => c + d"

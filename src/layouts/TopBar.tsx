@@ -28,25 +28,21 @@ const TopBar = (props: TopBarProps) => {
         <Typography
           variant="h6"
           component="div"
-          flexGrow="3"
-          sx={{display: {xs: 'none', sm: 'block'}}}
+          sx={{flexGrow: 3, display: {xs: 'none', sm: 'block'}}}
         >
           Bravo-Yankee - Master the Phonetic Alphabet!
         </Typography>
         <Typography
           variant="h6"
           component="div"
-          flexGrow="3"
-          sx={{display: {xs: 'block', sm: 'none'}}}
+          sx={{flexGrow: 3, display: {xs: 'block', sm: 'none'}}}
         >
           Bravo-Yankee
         </Typography>
         <Typography
           variant="subtitle1"
           component="div"
-          textAlign="right"
-          flexGrow="1"
-          sx={{display: {xs: 'none', sm: 'block'}}}
+          sx={{textAlign: 'right', flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
         >
           <em>Fair winds!</em>
         </Typography>

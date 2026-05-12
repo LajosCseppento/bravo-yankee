@@ -36,7 +36,7 @@ const Special = ({current, input, reset}: Props) => {
     </Button>
   );
 
-  const createVideo = (source: JSX.Element) => (
+  const createVideo = (source: React.ReactNode) => (
     <>
       <Box sx={{textAlign: 'center'}}>
         <video ref={videoRef} width="75%" height="auto" controls autoPlay muted>
@@ -44,7 +44,7 @@ const Special = ({current, input, reset}: Props) => {
           Cannot play the video. Sorry.
         </video>
       </Box>
-      <Stack direction="row" alignSelf="center">
+      <Stack direction="row" sx={{alignSelf: 'center'}}>
         <Button onClick={restart}>Again!</Button>
         <Button onClick={unmute}>With sound!</Button>
         {closeButton}
@@ -52,7 +52,7 @@ const Special = ({current, input, reset}: Props) => {
     </>
   );
 
-  let content: JSX.Element | null = null;
+  let content: React.ReactNode = null;
   if (current?.letter === 'r' && input === 'rosie') {
     content = (
       <Stack>
