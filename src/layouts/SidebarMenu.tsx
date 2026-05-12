@@ -9,14 +9,14 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import {type ReactNode} from 'react';
+import React from 'react';
 import {Link as RouterLink, useLocation} from 'react-router-dom';
 
 type SidebarItem = {
   title: string;
   path: string;
-  icon: ReactNode;
-  secondaryAction?: ReactNode;
+  icon: React.ReactNode;
+  secondaryAction?: React.ReactNode;
 };
 
 const items: SidebarItem[][] = [

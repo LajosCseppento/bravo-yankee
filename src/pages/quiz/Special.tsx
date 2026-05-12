@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import {type ReactNode, useRef} from 'react';
+import React, {useRef} from 'react';
 
 import CodeWord from '@app/model/CodeWord';
 
@@ -36,7 +36,7 @@ const Special = ({current, input, reset}: Props) => {
     </Button>
   );
 
-  const createVideo = (source: ReactNode) => (
+  const createVideo = (source: React.ReactNode) => (
     <>
       <Box sx={{textAlign: 'center'}}>
         <video ref={videoRef} width="75%" height="auto" controls autoPlay muted>
@@ -52,7 +52,7 @@ const Special = ({current, input, reset}: Props) => {
     </>
   );
 
-  let content: ReactNode = null;
+  let content: React.ReactNode = null;
   if (current?.letter === 'r' && input === 'rosie') {
     content = (
       <Stack>
